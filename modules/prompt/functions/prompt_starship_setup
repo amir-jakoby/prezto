@@ -1,0 +1,7 @@
+# Require starship to be available.
+(( $+commands[starship] )) || return 1
+
+# Tell prezto we can manage this prompt (editor-info integration).
+zstyle ':prezto:module:prompt' managed 'yes'
+
+eval "$(starship init zsh)"
